@@ -1,0 +1,9 @@
+{
+  "id": "monitoring-logstash",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 5055,
+  "containerPort": 5000,
+  "protocol": "udp",
+  "selector": { "name": "monitoringElk" }
+}

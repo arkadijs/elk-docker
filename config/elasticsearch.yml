@@ -1,0 +1,5 @@
+path.data: /data/elasticsearch
+path.logs: /data/logs
+path.work: /tmp
+http.cors.enabled: true
+script.disable_dynamic: true

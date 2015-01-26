@@ -1,0 +1,8 @@
+{
+  "id": "monitoring-elasticsearch",
+  "kind": "Service",
+  "apiVersion": "v1beta1",
+  "port": 59020,
+  "containerPort": 9200,
+  "selector": { "name": "monitoringElk" }
+}

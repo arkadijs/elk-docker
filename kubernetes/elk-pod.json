@@ -1,0 +1,31 @@
+{
+  "id": "monitoringElkController",
+  "kind": "ReplicationController",
+  "apiVersion": "v1beta1",
+  "desiredState": {
+    "replicas": 1,
+    "replicaSelector": {"name": "monitoringElk"},
+    "podTemplate": {
+      "desiredState": {
+        "manifest": {
+          "version": "v1beta1",
+          "id": "monitoringElk",
+          "containers": [{
+            "name": "elk",
+            "image": "docker-registry.r53.acp.io:5000/arkadi/elk:1",
+            "ports": [
+              {"containerPort": 5000, "hostPort": 5005, "protocol": "udp"},
+              {"containerPort": 9200, "hostPort": 48020},
+              {"containerPort": 80,   "hostPort": 48080}],
+            "env": [
+              {"name": "__MONITORING_ELASTICSEARCH_SERVICE_PORT", "value": "59020"}]
+          }]
+        }
+      },
+      "labels": {
+        "name": "monitoringElk"
+      }
+    }
+  },
+  "labels": {"name": "monitoringElk"}
+}
