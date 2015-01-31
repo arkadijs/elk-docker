@@ -2,6 +2,7 @@ FROM phusion/baseimage:0.9.16
 MAINTAINER Arkadi Shishlov <arkadi.shishlov@gmail.com>
 
 RUN apt-get update \
+    && apt-get upgrade -y \
     && apt-get install -y openjdk-7-jdk python-pip lighttpd wget tar gzip sed \
     && apt-get clean \
     && find /var/lib/apt/lists -type f -delete

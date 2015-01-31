@@ -1,9 +1,10 @@
 #!/bin/sh -xe
-v=1
+v=2
 tag=arkadi/elk
-tag2=docker-registry.r53.acp.io:5000/$tag
+tag2=$DEV_REGISTRY/$tag
 docker build -t $tag:$v .
 docker tag -f $tag:$v $tag:latest
 docker tag -f $tag:$v $tag2:$v
-docker push $tag
+docker push $tag:$v
+docker push $tag:latest
 docker push $tag2:$v
