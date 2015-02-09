@@ -1,5 +1,5 @@
 #!/bin/sh -xe
-v=2
+v=3
 tag=arkadi/elk
 tag2=$DEV_REGISTRY/$tag
 docker build -t $tag:$v .

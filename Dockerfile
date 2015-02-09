@@ -19,5 +19,7 @@ ADD service/elasticsearch.sh /etc/service/elasticsearch/run
 ADD service/logstash.sh      /etc/service/logstash/run
 ADD service/lighttpd.sh      /etc/service/lighttpd/run
 
+RUN rm -f /etc/service/sshd/down
+
 VOLUME /data
-EXPOSE 5000 9200 9300 80
+EXPOSE 22 5000 9200 9300 80

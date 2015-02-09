@@ -2,7 +2,7 @@
 
 This image is based on [phusion/baseimage] so it has proper boot sequence and  process supervision. Kubernetes manifests included.
 
-phusion/baseimage is Ubuntu 14.04 LTS based image with [runit] init, cron, syslog-ng, and sshd.
+phusion/baseimage is Ubuntu 14.04 LTS based image with [runit] init, cron, syslog-ng, and [sshd].
 
 Usage:
 
@@ -23,3 +23,4 @@ Usage:
 
 [phusion/baseimage]: http://phusion.github.io/baseimage-docker/
 [runit]: http://smarden.org/runit/
+[sshd]: https://github.com/phusion/baseimage-docker#login-to-the-container-or-running-a-command-inside-it-via-ssh
